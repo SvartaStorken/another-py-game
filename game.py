@@ -54,6 +54,7 @@ while attempts < 3:
     print("guess which person it is:")
     print("Firstname Lastname")
     answer = input()
+    time.sleep(1)
 
     guest_questions[attempts] = the_person
 
@@ -61,6 +62,7 @@ while attempts < 3:
         print("***  Right answer!    ***")
         print(the_person)
         bits_array[attempts] = 1
+        time.sleep(1)
 
     else:
         print("***  Wrong answer     ***")
@@ -70,6 +72,22 @@ while attempts < 3:
 time.sleep(1)
 
 print(*bits_array)
-
+bit_count = 0
 bit_calc = 1
 calc_array = [0, 0, 0]
+
+while bit_count < 3:
+  bit_calc = bit_calc + bit_calc
+  if 1 == bits_array[bit_count]:
+    calc_array[bit_count] = bit_calc
+    bit_count += 1
+  else:
+    bit_count += 1
+
+print(*calc_array)
+
+total_score = calc_array[0] + calc_array[1] + calc_array[2]
+print(total_score)
+
+
+
