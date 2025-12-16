@@ -80,13 +80,13 @@ bit_calc = 1
 calc_array = [0, 0, 0]
 
 while bit_count < 3:
-  bit_calc = bit_calc + bit_calc
   if 1 == bits_array[bit_count]:
     calc_array[bit_count] = bit_calc
     bit_count += 1
   else:
     bit_count += 1
-
+  bit_calc = bit_calc + bit_calc
+  
 print(*calc_array)
 
 print("*** Your Binary score ***")
