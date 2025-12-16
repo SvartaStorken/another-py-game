@@ -51,6 +51,7 @@ while attempts < 3:
       print("***  quote:           ***")
       print(Theo_de_Raadt_quotes[random_quote])
 
+    print("***                   ***")
     print("guess which person it is:")
     print("Firstname Lastname")
     answer = input()
@@ -71,6 +72,8 @@ while attempts < 3:
     attempts += 1
 time.sleep(1)
 
+print("***                   ***")
+print("*** Binary Scoreboard ***")
 print(*bits_array)
 bit_count = 0
 bit_calc = 1
@@ -86,6 +89,7 @@ while bit_count < 3:
 
 print(*calc_array)
 
+print("*** Your Binary score ***")
 total_score = calc_array[0] + calc_array[1] + calc_array[2]
 print(total_score)
 
